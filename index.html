@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Sample Content</title>
+
+</head>
+
+<body class="grey lighten-2">
+
+  <nav class="green ">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center">The Hidden Leaf</a>
+      <a href="#" data-target="slide-out" class="sidenav-trigger right">
+        <i class="material-icons">menu</i>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li>
+          <a href="sass.html">Sass</a>
+        </li>
+        <li>
+          <a href="badges.html">Components</a>
+        </li>
+        <li>
+          <a href="collapsible.html">JavaScript</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- sidenav -->
+  <ul id="slide-out" class="sidenav">
+    <li><div class="user-view">
+      <div class="background">
+        <img src="img2.jpg">
+      </div>
+      <a href="#user">
+        <img class="circle" src="i.d pic.png"></a>
+      <a href="#name">
+        <span class="white-text name">John Doe</span></a>
+      <a href="#email">
+        <span class="white-text email">jdandturk@gmail.com</span></a>
+    </div>
+    </li>
+    <li>
+      <a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+    <li>
+      <a href="#!">Second Link</a></li>
+    <li>
+      <div class="divider"></div></li>
+    <li>
+      <a class="subheader">Subheader</a></li>
+    <li>
+      <a class="waves-effect" href="#!">Third Link With Waves</a></li>
+  </ul>
+
+    <section class="section section-stats">
+      <div class="row">
+        <div class="col s12 m6 l3">
+          <div class="card-panel pink lighten-3 black-text center">
+              <i class="material-icons medium">account_balance</i>
+              <h5>Weekly Income</h5>
+              <h3 class="count">239000</h3>
+              <div class="progress">
+                <div class="indeterminate"></div>
+              </div>
+          </div>
+        </div><div class="col s12 m6 l3">
+          <div class="card-panel pink lighten-3 black-text center">
+              <i class="material-icons medium">vertical_align_bottom</i>
+              <h5>Weekly Loss</h5>
+              <h3 class="count">67588</h3>
+              <div class="progress">
+                <div class="indeterminate"></div>
+              </div>
+          </div>
+        </div> <div class="col s12 m6 l3">
+          <div class="card-panel pink lighten-3 black-text center">
+              <i class="material-icons medium">download</i>
+              <h5>Total Downloads</h5>
+              <h3 class="count">294000</h3>
+              <div class="progress">
+                <div class="indeterminate"></div>
+              </div>
+          </div>
+        </div> <div class="col s12 m6 l3">
+          <div class="card-panel pink lighten-3 black-text center">
+              <i class="material-icons medium">cloud</i>
+              <h5>Daily Logs</h5>
+              <h3 class="count">2300</h3>
+              <div class="progress">
+                <div class="indeterminate"></div>
+              </div>
+          </div>
+        </div>  
+      </div>
+    </section>
+
+
+  <section class="section section-stats lime lighten-2">
+    <div class="row">
+      <div class="card">
+        <div class="card-panel">
+          <div class="card-content">
+          </div>
+          </div>
+        </div>
+      <div class="col s12 m6 l6">        
+      <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+      </div>
+      <div class="col s12 m6 l4">
+        <ul class="collection with-header latest-comments">
+          <li class="green black-text collection-header">
+              <h5>Latest Issues</h5>
+          </li>
+          <li class="collection-item avatar">
+            <img src="Minato_Namikaze.webp" alt="" class="circle">
+            <span class="title"><b>Jonas</b></span>
+            <p>Very Good</p>
+            <a href="#" class="approve green-text">Approve</a>
+            <a href="#" class="deny red-text">deny</a>
+          </li>
+          <li class="collection-item avatar">
+            <img src="download - Copy.jpg" alt="" class="circle">
+            <span class="title"><b>Taylor</b></span>
+            <p>Very Good</p>
+            <a href="#" class="approve green-text">Approve</a>
+            <a href="#" class="deny red-text">deny</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+
+
+<!-- JQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+<script>
+$(document).ready(function(){
+  $('.sidenav').sidenav();
+});
+</script>
+
+<script>
+  window.onload = function () {
+  
+  var chart = new CanvasJS.Chart("chartContainer", {
+    animationEnabled: true,
+    exportEnabled: true,
+    theme: "light1", // "light1", "light2", "dark1", "dark2"
+    title:{
+      text: "Sample chart"
+    },
+      axisY: {
+        includeZero: true
+      },
+    data: [{
+      type: "column", //change type to bar, line, area, pie, etc
+      //indexLabel: "{y}", //Shows y value on all Data Points
+      indexLabelFontColor: "#5A5757",
+          indexLabelFontSize: 16,
+      indexLabelPlacement: "outside",
+      dataPoints: [
+        { x: 10, y: 71 },
+        { x: 20, y: 55 },
+        { x: 30, y: 50 },
+        { x: 40, y: 65 },
+        { x: 50, y: 92, indexLabel: "\u2605 Highest" },
+        { x: 60, y: 68 },
+        { x: 70, y: 38 },
+        { x: 80, y: 71 },
+        { x: 90, y: 54 },
+        { x: 100, y: 60 },
+        { x: 110, y: 36 },
+        { x: 120, y: 49 },
+        { x: 130, y: 21, indexLabel: "\u2691 Lowest" }
+      ]
+    }]
+  });
+  chart.render();
+  
+  }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+.main-header{
+    min-height: 600px;
+    background: url(../images/pexels-pixabay-208745.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+.main-header .showcase{
+    padding-top: 100px;
+}
+
+.section-building{
+    position: relative;
+    background: url(../images/pexels-allan-carvalho-13966863.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 160px;
+}
+
+.primary-overlay{
+    background: rgba(182, 239, 176, 0.5);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
